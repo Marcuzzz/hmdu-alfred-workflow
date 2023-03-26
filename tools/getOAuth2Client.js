@@ -26,16 +26,12 @@ const getStoredCredentials = async (credsPath) => {
 module.exports.getOAuth2Client = async (options) => {
   return new Promise(async (resolve) => {
     
-    let credsPath = config.get("credentialsPath");
-    let secret = config.get("google");
+    let credsPath = "./credentials.json";
+    let secret = config.get("web");
 
-    if (options == 'stream') {
-       credsPath = config.get("credentialsPathStream");
-       secret = config.get("googleStream");
-    }
     const oAuth2Client = new OAuth2Client({
-      clientId: secret.clientId,
-      clientSecret: secret.clientSecret,
+      clientId: secret.client_id,
+      clientSecret: secret.client_secret,
       redirectUri: secret.redirect_uris[0],
     });
 
@@ -70,7 +66,7 @@ module.exports.getOAuth2Client = async (options) => {
 
     const authorizeUrl = oAuth2Client.generateAuthUrl({
       access_type: "offline",
-      scope: secret.scopes,
+      scope: ["https://www.googleapis.com/auth/calendar","https://www.googleapis.com/auth/drive"],
       prompt: 'consent'
     });
 
