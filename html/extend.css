@@ -1,0 +1,237 @@
+.mybuttons {
+    background-color: #000000;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 150px;
+}
+
+
+#data{
+    font-size: 10px;
+}
+
+.mybuttons-settings {
+    background-color: #2b2b2b;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 150px;
+}
+
+.mybuttons:hover {
+    background-color: #2b2b2b;
+}
+
+.mylink {
+    /* background-color: #000000; */
+    /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: left;
+}
+
+.mytext {
+    /* background-color: #000000; */
+    /* Green */
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 150px;
+    text-align: left;
+}
+
+.mytext-input {
+    /* background-color: #000000; */
+    /* Green */
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 400px;
+    text-align: left;
+}
+.mytext-input-settings {
+    /* background-color: #000000; */
+    /* Green */
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 70px;
+    text-align: left;
+}
+
+.mytext-input-special {
+    /* background-color: #000000; */
+    /* Green */
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 420px;
+    text-align: left;
+}
+
+/* .drop-down-view {
+    height: 36px;
+    overflow-y: hidden;
+} */
+
+/* .drop-down-view:before {
+    content: "Select";
+}
+
+.drop-down-view:after {
+    content: "Select";
+    position: absolute;
+    top: 10px;
+    left: 50px;
+} */
+
+.drop-down-view {
+    top: 50px;
+    left: 500px;
+    vertical-align: top;
+    position: absolute;
+    min-height: 400px;
+    height: auto;
+    overflow-y: scroll;
+    z-index: 99999;
+}
+
+
+
+.nodisplay {
+    display: none;
+}
+
+.display {
+    display: block;
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    overflow: hidden;
+}
+
+.deactive {
+    background-color: #333333;
+}
+
+.mysettings {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0);
+    width: 50%;
+    height: 100%;
+    color: white;
+}
+
+.mybucket {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
+    color: white;
+    overflow-y: scroll;
+}
+
+.grid {
+padding: 0px;
+margin: 0px;
+background-color: #444;
+float: left;
+
+}
+
+/**
+ * ==============================================
+ * Dot Flashing
+ * ==============================================
+ */
+.dot-flashing {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #999999;
+    color: #ffffff;
+    animation: dotFlashing 1s infinite linear alternate;
+    animation-delay: .5s;
+}
+
+.dot-flashing::before,
+.dot-flashing::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+}
+
+.dot-flashing::before {
+    left: -15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+
+    background-color: #999999;
+    color: #ffffff;
+    animation: dotFlashing 1s infinite alternate;
+    animation-delay: 0s;
+}
+
+.dot-flashing::after {
+    left: 15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+
+    background-color: #999999;
+    color: #ffffff;
+    animation: dotFlashing 1s infinite alternate;
+    animation-delay: 1s;
+}
+
+@keyframes dotFlashing {
+    0% {
+        background-color: #999999;
+    }
+
+    50%,
+    100% {
+        background-color: #ffffff;
+    }
+}
