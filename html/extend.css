@@ -1,3 +1,9 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(16, 163, 131, 0.6); 
+    color: white;
+}
+
 .mybuttons {
     background-color: #000000;
     /* Green */
@@ -234,4 +240,97 @@ float: left;
     100% {
         background-color: #ffffff;
     }
+}
+
+
+#top {
+    z-index: 1000;
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    padding-top: 10px; /* Location of the box */
+    padding-left: 10px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 30px; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+}
+
+
+#bottom {
+    z-index: 1000;
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    padding-bottom: 60px; /* Location of the box */
+    padding-left: 30px; /* Location of the box */
+    left: 0;
+    font-size: 100%;
+    bottom: 0;
+    width: 100%; /* Full width */
+    height: 40px; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+}
+
+#nextup {
+    border: 2px solid #ffffff; 
+    border-radius: 20px;
+    z-index: 1000;
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    padding-top: 30px;
+    padding-bottom: 60px; /* Location of the box */
+    padding-left: 30px; /* Location of the box */
+    right: 10px;
+    font-size: 100%;
+    bottom: 10px;
+    width: 450px; /* Full width */
+    height: 40px; /* Full height */
+}
+
+#nextupcontent {
+    margin-top: -45px;
+}
+
+#nextupitems {
+    margin-top: -20px;
+}
+
+#nextupitem {
+    padding-top: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.centered {
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+    max-height: 100%;
+    font-size: 100%;
+    overflow: hidden;
+    margin-left: 200px;
+    margin-bottom: 100px;
+    padding: 20px;
+}
+
+#bottom:hover i {
+  color: red;
+}
+
+#pictureid { 
+    max-width: 200px; left: 30px; top: 140px; position: fixed; /* Stay in place */
+}    
+
+#picture {
+    max-width: 100%;
+    border: 2px solid #ffffff; 
+    border-radius: 20px;
 }

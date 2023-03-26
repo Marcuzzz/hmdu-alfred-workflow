@@ -9,183 +9,59 @@
         <link rel="shortcut icon" href="./img/favicon.ico" color="#000000" />
         <link rel="icon" sizes="16x16 32x32 64x64" href="./img/favicon.ico" color="#000000" />
         <link rel="apple-touch-icon" href="./img/favicon.ico" color="#000000" />
-
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
         <link href="./extend.css" rel="stylesheet" />
-        <!-- <link href="./index.css" rel="stylesheet">
-        <link href="./extend.css" rel="stylesheet">
-        <link href="./table.css" rel="stylesheet"> -->
-        <style>
-            body {
-              font-family: Arial, Helvetica, sans-serif;
-            }
-            
-            #top {
-                z-index: 1000;
-                display: block; /* Hidden by default */
-                position: fixed; /* Stay in place */
-                padding-top: 10px; /* Location of the box */
-                padding-left: 10px; /* Location of the box */
-                left: 0;
-                top: 0;
-                width: 100%; /* Full width */
-                height: 30px; /* Full height */
-                overflow: auto; /* Enable scroll if needed */
-                background-color: rgb(0, 0, 0); /* Fallback color */
-            }
-
-
-            #bottom {
-                z-index: 1000;
-                display: block; /* Hidden by default */
-                position: fixed; /* Stay in place */
-                padding-bottom: 60px; /* Location of the box */
-                padding-left: 30px; /* Location of the box */
-                left: 0;
-                font-size: 100%;
-                bottom: 0;
-                width: 100%; /* Full width */
-                height: 40px; /* Full height */
-                overflow: auto; /* Enable scroll if needed */
-            }
-
-            #nextup {
-                border: 2px solid #ffffff; 
-                border-radius: 20px;
-                z-index: 1000;
-                display: block; /* Hidden by default */
-                position: fixed; /* Stay in place */
-                padding-top: 30px;
-                padding-bottom: 60px; /* Location of the box */
-                padding-left: 30px; /* Location of the box */
-                right: 10px;
-                font-size: 100%;
-                bottom: 10px;
-                width: 450px; /* Full width */
-                height: 40px; /* Full height */
-            }
-
-            #nextupcontent {
-                margin-top: -45px;
-            }
-
-            #nextupitems {
-                margin-top: -20px;
-            }
-
-            #nextupitem {
-                padding-top: 10px;
-            }
-
-            .container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-            }
-
-            .centered {
-                font-family: Arial, Helvetica, sans-serif;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                max-width: 100%;
-                max-height: 100%;
-                font-size: 100%;
-                overflow: hidden;
-                margin-left: 200px;
-                margin-bottom: 100px;
-                padding: 20px;
-            }
-
-            #bottom:hover i {
-              color: red;
-            }
-
-            #pictureid { 
-                max-width: 200px; left: 30px; top: 140px; position: fixed; /* Stay in place */
-            }    
-            
-            #picture {
-                max-width: 100%;
-                border: 2px solid #ffffff; 
-                border-radius: 20px;
-            }
-        </style>
     </head>
 
-    <body style="background-color: rgba(16, 163, 131, 0.6); color: white">
+    <body>
         <div class="container">
             <div id="pictureid">
-                <img src="./img/pictures/1zrrlqz0YCBCLFaS5_keaEjnDKcyoCRHd.jpg" alt="Placeholder Image" id="picture"/>
+                <img src="./img/pictures/1zrrlqz0YCBCLFaS5_keaEjnDKcyoCRHd.jpg" alt="Placeholder Image" id="picture" />
             </div>
             <div id="centered" class="centered"></div>
             <div id="bottom"><i class="fa fa-user-plus fa-4x"></i></div>
         </div>
-        <div id="top"><i class="fa fa-birthday-cake fa-lg"></i><span style="width: 20px; display: inline-block;"></span></div>
+        <div id="top"><i class="fa fa-birthday-cake fa-lg"></i><span style="width: 20px; display: inline-block"></span></div>
 
         <div id="nextup">
             <div id="nextupcontent">
                 <h1>nextup:</h1>
                 <div id="nextupitems">
-                    <div id="nextupitem">
-                        <i class="fa fa-birthday-cake fa-lg"></i><span style="width: 20px; display: inline-block;"></span> Carolien 26-03-2023
-                    </div>
+                    <div id="nextupitem"><i class="fa fa-birthday-cake fa-lg"></i><span style="width: 20px; display: inline-block"></span> Carolien 26-03-2023</div>
 
                     <!-- <div id="nextupitem">
                         <i class="fa fa-birthday-cake fa-lg"></i><span style="width: 20px; display: inline-block;"></span> Carolien 26-03-2023
                     </div> -->
-
                 </div>
             </div>
         </div>
 
         <div id="settingswindow" class="mysettings nodisplay">
-          <div style="padding-top: 25px; padding-left: 25px">
-              <h1>Insert into calendar</h1>
-            
-              <label for="MacBasefolder" class="mytext">Name</label>
-              <input type="text" id="Name" name="Name" placeholder="" class="mytext-input-special" value="">
+            <div style="padding-top: 25px; padding-left: 25px">
+                <h1>Insert into calendar</h1>
 
-              <label for="MacBasefolder" class="mytext">Date</label>
-              <input type="text" id="Date" name="Date" placeholder="" class="mytext-input-special" value="">
+                <label for="MacBasefolder" class="mytext">Name</label>
+                <input type="text" id="Name" name="Name" placeholder="" class="mytext-input-special" value="" />
 
-              <label for="MacBasefolder" class="mytext">Image</label>
-              <input type="text" id="MacBasefolder" name="MacBasefolder" placeholder="" class="mytext-input-special" value="">
+                <label for="MacBasefolder" class="mytext">Date</label>
+                <input type="text" id="Date" name="Date" placeholder="" class="mytext-input-special" value="" />
 
-              <div style="text-align: right; padding-right: 75px;">
-              <button id="MacBasefolderLoad" class="mybuttons">browse</button>
-              </div>
-              
-              <br>
+                <label for="MacBasefolder" class="mytext">Image</label>
+                <input type="text" id="MacBasefolder" name="MacBasefolder" placeholder="" class="mytext-input-special" value="" />
 
-              <br />
-              <br />
-              <button id="Upload" class="mybuttons deactive">Upload</button>
-              <button id="closesettings" class="mybuttons deactive">Close</button>
-          </div>
-      </div>
-       
+                <div style="text-align: right; padding-right: 75px">
+                    <button id="MacBasefolderLoad" class="mybuttons">browse</button>
+                </div>
+
+                <br />
+
+                <br />
+                <br />
+                <button id="Upload" class="mybuttons deactive">Upload</button>
+                <button id="closesettings" class="mybuttons deactive">Close</button>
+            </div>
+        </div>
     </body>
 
     <script src="./index.js"></script>
-
-    <!-- <script>
-      // Array of all Font Awesome icons
-      const icons = [
-        "fa-ad",
-        "fa-address-book",
-        "fa-address-card",
-        "fa-adjust"
-      ];
-    
-      // Select a random icon from the array
-      const randomIcon = icons[Math.floor(Math.random() * icons.length)];
-    
-      // Set the icon as the content of the span element
-
-      console.log(`${randomIcon}`)
-      document.getElementById("random-icon").innerHTML = `<i class="fas ${randomIcon}"></i>`;
-    </script>
-     -->
 </html>
