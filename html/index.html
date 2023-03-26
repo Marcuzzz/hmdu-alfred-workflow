@@ -49,6 +49,34 @@
                 overflow: auto; /* Enable scroll if needed */
             }
 
+            #nextup {
+                border: 2px solid #ffffff; 
+                border-radius: 20px;
+                z-index: 1000;
+                display: block; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                padding-top: 30px;
+                padding-bottom: 60px; /* Location of the box */
+                padding-left: 30px; /* Location of the box */
+                right: 10px;
+                font-size: 100%;
+                bottom: 10px;
+                width: 450px; /* Full width */
+                height: 40px; /* Full height */
+            }
+
+            #nextupcontent {
+                margin-top: -45px;
+            }
+
+            #nextupitems {
+                margin-top: -20px;
+            }
+
+            #nextupitem {
+                padding-top: 10px;
+            }
+
             .container {
                 display: flex;
                 justify-content: center;
@@ -65,6 +93,8 @@
                 max-height: 100%;
                 font-size: 100%;
                 overflow: hidden;
+                margin-left: 200px;
+                margin-bottom: 100px;
                 padding: 20px;
             }
 
@@ -72,40 +102,66 @@
               color: red;
             }
 
+            #pictureid { 
+                max-width: 200px; left: 30px; top: 140px; position: fixed; /* Stay in place */
+            }    
+            
+            #picture {
+                max-width: 100%;
+                border: 2px solid #ffffff; 
+                border-radius: 20px;
+            }
         </style>
     </head>
 
     <body style="background-color: rgba(16, 163, 131, 0.6); color: white">
         <div class="container">
-            <div style="max-width: 200px; margin: 0 auto">
-                <img src="./img/pictures/1zrrlqz0YCBCLFaS5_keaEjnDKcyoCRHd.jpg" alt="Placeholder Image" style="max-width: 100%" />
+            <div id="pictureid">
+                <img src="./img/pictures/1zrrlqz0YCBCLFaS5_keaEjnDKcyoCRHd.jpg" alt="Placeholder Image" id="picture"/>
             </div>
             <div id="centered" class="centered"></div>
             <div id="bottom"><i class="fa fa-user-plus fa-4x"></i></div>
         </div>
-        <div id="top"><i class="fa fa-birthday-cake fa-lg"></i></div>
+        <div id="top"><i class="fa fa-birthday-cake fa-lg"></i><span style="width: 20px; display: inline-block;"></span></div>
 
+        <div id="nextup">
+            <div id="nextupcontent">
+                <h1>nextup:</h1>
+                <div id="nextupitems">
+                    <div id="nextupitem">
+                        <i class="fa fa-birthday-cake fa-lg"></i><span style="width: 20px; display: inline-block;"></span> Carolien 26-03-2023
+                    </div>
 
+                    <!-- <div id="nextupitem">
+                        <i class="fa fa-birthday-cake fa-lg"></i><span style="width: 20px; display: inline-block;"></span> Carolien 26-03-2023
+                    </div> -->
+
+                </div>
+            </div>
+        </div>
 
         <div id="settingswindow" class="mysettings nodisplay">
           <div style="padding-top: 25px; padding-left: 25px">
-              <h1>Settings</h1>
+              <h1>Insert into calendar</h1>
+            
+              <label for="MacBasefolder" class="mytext">Name</label>
+              <input type="text" id="Name" name="Name" placeholder="" class="mytext-input-special" value="">
 
+              <label for="MacBasefolder" class="mytext">Date</label>
+              <input type="text" id="Date" name="Date" placeholder="" class="mytext-input-special" value="">
 
-              <input type="checkbox" id="init" name="init" /> Uploading templates, overwrite sheets? <br />
-              <input type="checkbox" id="force" name="force" /> Force, renders and projects files will be recreated? <br />
-              <input type="checkbox" id="projects-only" name="projects-only" /> Create projects only? <br />
-              <!-- <input type="checkbox" id="noaudio" name="noaudio" checked /> No audio tag <br /> -->
-              <!-- <input type="checkbox" id="aerender" name="aerender" /> Render with aerender tag<br />
-              <input type="checkbox" id="padding" name="padding" checked /> Padding tag<br /> -->
-              <input type="checkbox" id="thumbs" name="thumbs" disabled /> Create thumbnails? <br />
-              <input type="checkbox" id="mp4" name="mp4" disabled /> Create mp4? <br />
-              <input type="checkbox" id="mp4low" name="mp4low" disabled /> Create mp4 lowres? <br />
-              <input type="checkbox" id="srt" name="srt" disabled /> Apply SRTS on renders? <br />
-              <input type="checkbox" id="ws" name="ws" disabled /> Upload to Workspace? <br />
+              <label for="MacBasefolder" class="mytext">Image</label>
+              <input type="text" id="MacBasefolder" name="MacBasefolder" placeholder="" class="mytext-input-special" value="">
+
+              <div style="text-align: right; padding-right: 75px;">
+              <button id="MacBasefolderLoad" class="mybuttons">browse</button>
+              </div>
+              
+              <br>
 
               <br />
               <br />
+              <button id="Upload" class="mybuttons deactive">Upload</button>
               <button id="closesettings" class="mybuttons deactive">Close</button>
           </div>
       </div>
