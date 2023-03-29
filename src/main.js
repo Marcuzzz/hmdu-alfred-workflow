@@ -1,7 +1,7 @@
 const {app, BrowserWindow, ipcMain, dialog} = require('electron')
 const path = require('path')
 require('@electron/remote/main').initialize()
-
+const { getEventList, getCalendarlist } = require('../tools/calendar');
 const global = require('../global');
 global.homedir = require('os').homedir();
 global.args = process.argv;
@@ -26,15 +26,29 @@ function createWindow () {
 
   
   mainWindow.loadFile('./html/index.html')
-  //mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
   require("@electron/remote/main").enable(mainWindow.webContents);
 
   global.version = app.getVersion()
 
-  mainWindow.on('blur', () => {
-    mainWindow.close();
-    app.quit()
+  // mainWindow.on('blur', () => {
+  //   mainWindow.close();
+  //   app.quit()
+  // });
+
+  ipcMain.on('get-event-list', async (event, calendarId) => {
+    try {
+      const myitems = await getEventList(calendarId);
+      // Send the event list back to the renderer process
+      console.log('calendarId from main',calendarId)
+      event.sender.send('event-list-updated', myitems);
+    } catch (err) {
+
+      console.log('calendarId from main',err)
+      // Handle errors
+    }
   });
+  
 }
 
 app.whenReady().then(() => {
@@ -56,4 +70,5 @@ app.on('window-all-closed', function () {
   }
 
 });
+
 

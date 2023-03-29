@@ -10,6 +10,7 @@
     "aws-sdk": "^2.328.0",
     "chalk": "^2.4.2",
     "config": "^3.3.9",
+    "electron-prompt": "^1.7.0",
     "fd-slicer": "^1.1.0",
     "findit2": "~2.2.3",
     "fs-extra": "^11.1.1",

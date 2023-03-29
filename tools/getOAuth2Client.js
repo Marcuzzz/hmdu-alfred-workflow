@@ -54,6 +54,8 @@ module.exports.getOAuth2Client = async (options) => {
           storedCredentials.refresh_token
         );
         tokens.res.data["refresh_token"] = storedCredentials.refresh_token;
+        if (storedCredentials.calendarId)
+          tokens.res.data['calendarId'] = storedCredentials.calendarId;
         fs.outputJsonSync(credsPath, tokens.res.data);
         //process.exit(0);
         return resolve(oAuth2Client);
